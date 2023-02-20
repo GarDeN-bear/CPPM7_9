@@ -32,7 +32,7 @@ bool Fraction::operator<(Fraction& fraction) {
 }
 
 bool Fraction::operator>(Fraction& fraction) {
-	if (!(*this < fraction)) {
+	if (result(numerator_, denominator_) > result(fraction.numerator_, fraction.denominator_)) {
 		return true;
 	}
 	else {
@@ -50,7 +50,7 @@ bool Fraction::operator<=(Fraction& fraction) {
 }
 
 bool Fraction::operator>=(Fraction& fraction) {
-	if (!(*this <= fraction)) {
+	if (result(numerator_, denominator_) >= result(fraction.numerator_, fraction.denominator_)) {
 		return true;
 	}
 	else {
